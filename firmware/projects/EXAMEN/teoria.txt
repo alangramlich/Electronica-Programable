@@ -1,0 +1,26 @@
+PREGUNTA 1-------------------------------------------------------------------
+1.a- Figura superior: resistencias ponderadas
+     Figura inferior: conversor R2R
+1.b-Ventajas de resistencias ponderadas: usa menos componentes, es mas sencillo de fabricar.
+    Desventajas de resistencias ponderadas: requiere precision de gran calidad 
+en las resistencias, lo que lo vuelve costoso y dificil de fabricar.
+    Ventajas de R2R: solo usa dos valores de resistencias, se obtienen de forma mas
+ sencilla sin perder precision.
+    Desventajas: cantidad mayor de componentes
+1.c-
+
+PREGUNTA 2-------------------------------------------------------------------
+2.a- Figura superior:conexion directa protocolo SPI.
+Necesito 5 cables: SCLK, MOSI, MISO y los Slave Select 1 y 2.
+     Figura inferior: circuito inter-integrado. Solo necesito tres cables: el
+SDA serial data, el SCL serial clock y la masa.
+2.b- Ventajas de conexion directa: es la forma mas rapida y segura de pasar datos.
+No necesito preocuparme de que se puedan corromper en el camino.
+Desventajas: requiere mas cables y para un master y varios slave, la cantidad 
+de cables lo vuelve inviable.
+     Ventajas de I2C: Ahorra en cables, ya que se necesitan menos y son bidireccionales.
+     Desventajas de I2C: Solo se puede usar en poca distancia (maximo un metro), y tiene 
+pocas velocidades de seleccion para mandar datos. Necesita mandar un aknowledge cada 9 datos.
+Contempla que hacer en caso de colisiones. Cualquier nodo se puede volver master.
+2.c- El protocolo de conexion directa no incluye un procedimiento para que haya mas de 
+un master. En cambio, el I2C si.

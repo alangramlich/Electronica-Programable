@@ -1,0 +1,13 @@
+1-
+a-Conversion directa CAD flash: La tension de entrada pasa por un arreglo de comparadores, que consta de un comparador
+por cada valor posible de salida. Osea que si tengo 1024 salidas posibles, tendre que impementar 1024 comparadores.
+Cuando ingrese la se;al, se activaran todos los comparadores que esten por debajo del voltaje de la se;al y el primer cero sera el punto de corte. Esto se conoce como codigo termometro.
+Ventaja: velocidad y resolucion altas. Desventajas: gran cantidad de componentes.
+b-El conversor que trabaja por aproximaciones sucesivas es mas barato que otros conversores, y mantiene una velocidad y resolucion medias-altas.
+Por esto es el mas usado, aunque como desventaja tiene que no es el que tiene mayor resolucion ni mayor velocidad.
+
+2-
+Estandar de comunicacion serie asincrona. Si no se transmiten datos, se mantiene una linea en alto para que no se corte la comunicacion.
+Cuando se quieren mandar datos, se manda un bit-start. Luego de esto, se mandan los datos y se termina con un bit-stop.
+Para este estandar, el cero logico es un valor entre 3 y 25 V, y un 1 logico esta entre -3 y -25 V (como se ve en la imagen).
+Con este rango, se evitan los cero voltios para no tener inconvenientes con cortes de linea.
